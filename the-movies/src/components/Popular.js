@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect }  from "react";
 
 export default function Popular(){
     return (
@@ -10,6 +10,7 @@ export default function Popular(){
 }
 
 const apiKey = "f9a8200a794828e016db6bb8fca5a95a"
+
 //
 // FETCH POPULAR
 //
@@ -19,7 +20,7 @@ fetch(`https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}&language=en-
     const popular = data.results;
     console.log(data)
 
-    for (let i = 0; i < 4; i++) {
+    for (let i = 0; i < 6; i++) {
 
         const baseImageUrl = 'https://image.tmdb.org/t/p/';
         const popMovies = document.getElementById("pop_details");
@@ -47,7 +48,7 @@ fetch(`https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}&language=en-
         }
         
         popMovieItem.innerHTML= 
-        `
+        `<a href="
         <p>${popIcon}</p>
         `
         popMovies.appendChild(popMovieItem);  
