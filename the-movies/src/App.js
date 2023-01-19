@@ -5,19 +5,19 @@ import Popular from "./components/Popular";
 import TopMovies from "./components/TopMovies";
 import UpcomingMovies from "./components/UpcomingMovies";
 import Footer from "./components/Footer";
-import Fetch from "./components/Fetch";
+// import Fetch from "./components/Fetch";
 
 
 export default function App() {
   return (
-    <div class="container">
-    <div id="movie_splash" class="movie_splash">
+    <div className="container">
+    <div id="movie_splash" className="movie_splash">
     <Header />
     </div>
-    <Fetch />
+    {/* <Fetch /> */}
     <Popular />
-    <TopMovies />
-    <UpcomingMovies />
+    {/* <TopMovies /> */}
+    {/* <UpcomingMovies /> */}
     <Footer />
     </div>
   );
